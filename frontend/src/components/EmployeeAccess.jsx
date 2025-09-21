@@ -8,7 +8,7 @@ const EmployeeAccess = () => {
     const fetchEmployees = async () => {
       try {
         const res = await axios.get("http://localhost:5000/api/employees");
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setEmployeesReq(res.data.data);
       } catch (error) {
         console.error("Error fetching employees:", error);
