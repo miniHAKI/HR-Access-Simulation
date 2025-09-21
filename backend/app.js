@@ -2,6 +2,7 @@ const express = require("express")
 const dotenv = require("dotenv")
 const cookieParser = require("cookie-parser")
 const HrRoutes = require("./routes/hr.routes")
+const cors = require("cors");
 
 dotenv.config()
 
@@ -10,6 +11,7 @@ const port = process.env.PORT || 4000;
 
 app.use(express.json())
 app.use(cookieParser())
+ app.use(cors());
 
 
 app.get("/", (req, res) => {

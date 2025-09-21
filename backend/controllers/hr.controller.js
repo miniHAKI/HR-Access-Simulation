@@ -3,7 +3,7 @@ const EmployeeData = require("../utils/EmployeeData");
 module.exports.GetAllEmployess = async (req, res) => {
   try {
     let data = EmployeeData;
-    console.log(data);
+    // console.log(data);
     if (!data || data.length === 0) {
       res.status(404).json({
         message: "data not found",
